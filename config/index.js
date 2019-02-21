@@ -20,7 +20,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8087,    ////自己修改的
+    port: 8888,    ////自己修改的
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
