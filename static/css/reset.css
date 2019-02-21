@@ -1,0 +1,137 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom  自定义的一些对移动端的reset样式 */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*设置1像素的全局样式*/
+.border-1px{
+    position: relative;
+}
+.border-1px::after{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /*颜色自己设定*/
+  /*border-top:1px solid rgba(7,17,27,0.1);*/
+  content: '';  
+}
+
+@media (-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:1.5) {
+    .border-1px::after{
+        -webkit-transform:scaleY(0.7);
+        transform:scaleY(0.7);
+    }
+}
+/* 1.5乘以0.7接近1； 2乘以0.5等于1 ；这样根据设备像素比不同进行不同的缩放 */
+@media (-webkit-min-device-pixel-ratio:2),(min-device-pixel-ratio:2) {
+    .border-1px::after{
+        -webkit-transform:scaleY(0.5);
+        transform:scaleY(0.5);
+    }
+}
+
+
+
+/* 定义个全局的清除浮动 */
+.clearfix::after{
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    content: '';
+}
+
+body,html{
+    line-height: 1;
+    font-weight: 200;
+    font-family: 'PingFang SC','STHeitiSC-Light','arial','sans-serif';
+}
+
+
